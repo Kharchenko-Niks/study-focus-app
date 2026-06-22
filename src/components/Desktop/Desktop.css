@@ -1,0 +1,17 @@
+.desktop{
+    min-height: 100vh;
+    padding: 24px;
+
+    display: grid;
+    grid-template-columns: repeat(3, lfr);
+    gap: 20px;
+
+    background: linear-gradient(
+        180deg,
+        #6d5ca5 0%,
+        #8570c4 50%,
+        #b4a3ff 100%
+    );
+
+    position: relative;
+}
