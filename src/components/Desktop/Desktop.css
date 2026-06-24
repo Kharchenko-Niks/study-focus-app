@@ -1,17 +1,64 @@
-.desktop{
+.desktop {
     min-height: 100vh;
-    padding: 24px;
+
+    background: 
+    linear-gradient(
+        rgba(80,40,140,.2),
+        rgba(80,40,140,.2),
+    ),
+    url("/retro-city-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
 
     display: grid;
-    grid-template-columns: repeat(3, lfr);
+
+    grid-template-columns: 260px 500px 320px;
+
+    grid-template-areas: 
+    "goal timer character"
+    "stats timer habit"
+    "music timer quest"
+    ". mode fun";
+
     gap: 20px;
 
-    background: linear-gradient(
-        180deg,
-        #6d5ca5 0%,
-        #8570c4 50%,
-        #b4a3ff 100%
-    );
+    padding: 20px 20px 80px;
+}
 
-    position: relative;
+.goal {
+    grid-area: goal;
+}
+
+.timer {
+    grid-area: timer;
+}
+
+
+.character {
+    grid-area: character;
+}
+
+.stats {
+    grid-area: stats;
+}
+
+.habit {
+    grid-area: habit;
+}
+
+.music {
+    grid-area: music;
+}
+
+.quest {
+    grid-area: quest;
+}
+
+.mode {
+    grid-area: mode;
+}
+
+.fun {
+    grid-area: fun;
 }

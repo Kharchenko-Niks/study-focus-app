@@ -1,6 +1,50 @@
-import "../../styles/window.css"
+import { useEffect, useState } from "react";
+import "../../styles/window.css";
 
-function TimerW(){
+const POMODORO_TIME = 25 * 60;
+
+function TimerW() {
+  const [seconds, setSeconds] = useState(POMODORO_TIME);
+  const [isRunning, setIsRunning] = useState(false);
+
+  useEffect(() => {
+    if (!isRunning) return;
+
+    const timer = setInterval(() => {
+      setSeconds((prev) => {
+        if (prev <= 1) {
+          clearInterval(timer);
+          setIsRunning(false);
+          return 0;
+        }
+
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [isRunning]);
+
+  const minutes = Math.floor(seconds / 60);
+  const secs = seconds % 60;
+
+  const formattedTime = `${String(minutes).padStart(2, "0")}:${String(
+    secs
+  ).padStart(2, "0")}`;
+
+  const handleStart = () => {
+    setIsRunning(true);
+  };
+
+  const handlePause = () => {
+    setIsRunning(false);
+  };
+
+  const handleReset = () => {
+    setIsRunning(false);
+    setSeconds(POMODORO_TIME);
+  };
+
   return (
     <div className="window">
       <div className="window-header">
@@ -9,9 +53,21 @@ function TimerW(){
       </div>
 
       <div className="window-body">
-        <h2>25:00</h2>
+        <h2>{formattedTime}</h2>
 
-        <button>Start</button>
+        <div className="timer-buttons">
+          <button onClick={handleStart}>
+            ▶ Start
+          </button>
+
+          <button onClick={handlePause}>
+            ⏸ Pause
+          </button>
+
+          <button onClick={handleReset}>
+            ↺ Reset
+          </button>
+        </div>
       </div>
     </div>
   );
