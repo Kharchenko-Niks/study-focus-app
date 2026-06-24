@@ -1,0 +1,42 @@
+.window {
+    background: #d9c2ff;
+    border: 3px solid #ffffff;
+    box-shadow: 
+        inset -2px -2px 0 #6d4db3,
+        inset 2px 2px 0 #ffffff;
+    width: 280px;
+    margin: 20px;
+}
+
+.window-header {
+    background: linear-gradient(to right, #7b5ad6, #b58cff);
+    color: white;
+    padding: 8px 12px;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.window-body {
+    padding: 20px;
+}
+
+.window button {
+    margin-top: 15px;
+    padding: 8px 16px;
+
+    border: 2px solid white;
+    background: #b58cff;
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+.window button:hover{
+    transform: translateY(-1px);
+}
+
+.window button:hover{
+    transform: translateY(+1px);
+}
