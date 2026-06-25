@@ -1,4 +1,5 @@
 import CharacterW from "../CharacterWindow/CharacterW";
+import FrogW from "../FrogWindow/FrogW";
 import FunW from "../FunWindow/FunW";
 import GoalW from "../GoalWindow/GoalW";
 import HabitW from "../HabitWindow/HabitW";
@@ -47,6 +48,10 @@ function Desktop(){
 
             <div className="fun">
                 <FunW/>
+            </div>
+
+            <div className="frog">
+                <FrogW/>
             </div>
 
             <Taskbar/>

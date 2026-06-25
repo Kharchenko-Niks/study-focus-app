@@ -19,7 +19,7 @@
     "goal timer character"
     "stats timer habit"
     "music timer quest"
-    ". mode fun";
+    "frog mode fun";
 
     gap: 20px;
 
@@ -61,4 +61,8 @@
 
 .fun {
     grid-area: fun;
+}
+
+.frog {
+    grid-area: frog;
 }

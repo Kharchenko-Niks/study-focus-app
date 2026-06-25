@@ -1,36 +1,72 @@
 .window {
     background: #d9c2ff;
-    border: 3px solid #ffffff;
-    box-shadow: 
-        inset -2px -2px 0 #6d4db3,
-        inset 2px 2px 0 #ffffff;
-    width: 280px;
-    margin: 20px;
+
+    border-top: 3px solid #ffffff;
+    border-left:  3px solid  #ffffff;
+
+    border-right: 3px solid #4b2f8d;
+    border-bottom: 3px solid #4b2f8d;
+
+    box-shadow: 4px 4px 0 rgba(0,0,0,.25);
+
+    overflow: hidden;
 }
 
 .window-header {
-    background: linear-gradient(to right, #7b5ad6, #b58cff);
+    background: linear-gradient(
+        to right,
+        #6e49c6,
+        #a884ff
+        );
+
     color: white;
     padding: 8px 12px;
-    font-weight: bold;
-
     display: flex;
+    font-weight: bold;
     justify-content: space-between;
+    font-size: 14px;
+}
+
+.window-controls {
+    display: flex;
+    gap: 4px;
+}
+
+.control-btn {
+    width: 18px;
+    height: 18px;
+
+    border: none;
+    background: #d8c9ff;
+    cursor: pointer;
+    font-weight: bold;
 }
 
 .window-body {
-    padding: 20px;
+    padding: 18px;
 }
 
 .window button {
-    margin-top: 15px;
-    padding: 8px 16px;
-
-    border: 2px solid white;
+   padding: 8px 14px;
     background: #b58cff;
+
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+
+    border-right: 2px solid #5f43a5;
+    border-bottom: 2px solid #5f43a5;
+
     cursor: pointer;
 
     font-weight: bold;
+}
+
+.window button:active {
+      border-top: 2px solid #5f43a5;
+    border-left: 2px solid #5f43a5;
+
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
 }
 
 .window button:hover{
