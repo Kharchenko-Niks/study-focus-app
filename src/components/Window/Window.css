@@ -1,0 +1,67 @@
+.window{
+
+    width:300px;
+    min-height:200px;
+
+    background:#222;
+
+    border:2px solid #555;
+    border-radius:10px;
+
+    color:white;
+
+    position:absolute;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.5);
+
+}
+
+
+.window-header{
+
+    height:35px;
+
+    background:#333;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 10px;
+
+    border-radius:8px 8px 0 0;
+
+}
+
+
+.window-header h3{
+
+    margin:0;
+
+    font-size:16px;
+
+}
+
+
+
+.close-btn{
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+}
+
+
+
+.window-content{
+
+    padding:15px;
+
+}
